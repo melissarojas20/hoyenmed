@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hoy en Med</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Hoy en Med</h1>
+    <p>¿Qué quieres hacer hoy en Medellín?</p>
+  </header>
+
+  <nav class="categorias">
+    <button onclick="filtrar('Todos')">Todos</button>
+    <button onclick="filtrar('Cultura')">Cultura</button>
+    <button onclick="filtrar('Comida')">Comida</button>
+    <button onclick="filtrar('Aventura')">Aventura</button>
+    <button onclick="filtrar('Noche')">Noche</button>
+  </nav>
+
+  <div id="mapa"></div>
+  <div id="lugares" class="contenedor-lugares"></div>
+
+  <a href="https://wa.me/573105453556" class="whatsapp" target="_blank">📲 Contáctanos</a>
+
+  <script src="script.js"></script>
+</body>
+</html>
