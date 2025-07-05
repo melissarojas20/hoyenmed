@@ -1,89 +1,45 @@
-
 body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background: #f8f8f8;
-  color: #333;
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    background-color: #f9f9f9;
 }
 
-.app-header {
-  background-color: #008060;
-  color: white;
-  padding: 20px;
-  text-align: center;
+header {
+    background-color: #00b894;
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
 }
 
-.logo {
-  max-width: 100px;
-  margin-bottom: 10px;
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1rem;
+    background: #ffffff;
 }
 
-.filtros {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  padding: 20px;
-  text-align: center;
-  background: white;
+.filter-btn {
+    margin: 0.25rem;
+    padding: 0.6rem 1.2rem;
+    border: none;
+    background-color: #dfe6e9;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
 }
 
-.filtros select, .filtros input, .filtros button {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  max-width: 400px;
-  margin: 0 auto;
+.filter-btn.active {
+    background-color: #00cec9;
+    color: white;
 }
 
-.grid-lugares {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 20px;
-  padding: 20px;
+#map {
+    height: 500px;
 }
 
-.card {
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 1px 5px rgba(0,0,0,0.1);
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-}
-
-.card img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-}
-
-.card-content {
-  padding: 15px;
-}
-
-.card h3 {
-  margin: 0 0 10px;
-}
-
-.card p {
-  font-size: 14px;
-}
-
-.card a {
-  display: block;
-  background: #25D366;
-  color: white;
-  padding: 10px;
-  text-align: center;
-  font-weight: bold;
-  text-decoration: none;
-  border-radius: 6px;
-  margin-top: 10px;
-}
-
-footer {
-  text-align: center;
-  font-size: 14px;
-  padding: 15px;
-  background: #eee;
+.lang-switcher {
+    position: absolute;
+    top: 10px;
+    left: 10px;
 }
