@@ -6,7 +6,9 @@ const translations = {
         btn_culture: "Cultura",
         btn_food: "Comida",
         btn_adventure: "Aventura",
-        btn_night: "Noche"
+        btn_night: "Noche",
+        btn_rentals: "Propiedades",
+        btn_cars: "Autos"
     },
     en: {
         title: "Today in Med",
@@ -15,7 +17,9 @@ const translations = {
         btn_culture: "Culture",
         btn_food: "Food",
         btn_adventure: "Adventure",
-        btn_night: "Night"
+        btn_night: "Night",
+        btn_rentals: "Rentals",
+        btn_cars: "Cars"
     }
 };
 
@@ -27,6 +31,8 @@ function setLanguage(lang) {
     document.getElementById("btn-food").innerText = translations[lang].btn_food;
     document.getElementById("btn-adventure").innerText = translations[lang].btn_adventure;
     document.getElementById("btn-night").innerText = translations[lang].btn_night;
+    document.getElementById("btn-rentals").innerText = translations[lang].btn_rentals;
+    document.getElementById("btn-cars").innerText = translations[lang].btn_cars;
 }
 
 document.getElementById("lang-es").addEventListener("click", () => setLanguage("es"));
