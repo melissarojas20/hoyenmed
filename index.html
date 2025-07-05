@@ -1,32 +1,38 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Hoy en Med</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
 </head>
 <body>
+  <div class="lang-switch">
+    <button id="lang-es" class="active">🇪🇸 Español</button>
+    <button id="lang-en">🇺🇸 English</button>
+  </div>
+
   <header>
-    <h1>Hoy en Med</h1>
-    <p>¿Qué quieres hacer hoy en Medellín?</p>
+    <h1 id="title">Hoy en Med</h1>
+    <p id="subtitle">¿Qué quieres hacer hoy en Medellín?</p>
   </header>
 
-  <nav class="categorias">
-    <button onclick="filtrar('Todos')">Todos</button>
-    <button onclick="filtrar('Cultura')">Cultura</button>
-    <button onclick="filtrar('Comida')">Comida</button>
-    <button onclick="filtrar('Aventura')">Aventura</button>
-    <button onclick="filtrar('Noche')">Noche</button>
-  </nav>
+  <div class="filters">
+    <button data-category="Todos" class="active" id="btn-all">Todos</button>
+    <button data-category="Cultura" id="btn-culture">Cultura</button>
+    <button data-category="Comida" id="btn-food">Comida</button>
+    <button data-category="Aventura" id="btn-adventure">Aventura</button>
+    <button data-category="Noche" id="btn-night">Noche</button>
+  </div>
 
-  <div id="mapa"></div>
-  <div id="lugares" class="contenedor-lugares"></div>
+  <main>
+    <div id="map"></div>
+  </main>
 
-  <a href="https://wa.me/573105453556" class="whatsapp" target="_blank">📲 Contáctanos</a>
+  <a class="whatsapp" href="https://wa.me/573105453556" target="_blank" id="whatsapp-link">📱 Contáctanos</a>
 
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
