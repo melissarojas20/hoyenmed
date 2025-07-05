@@ -1,37 +1,41 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hoy en Med - Explora Medellín</title>
-  <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hoy en Med</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
 </head>
 <body>
-  <header class="app-header">
-    <img src="img/logo-hoyenmed.png" alt="Logo Hoy en Med" class="logo" />
-    <h1>¿Qué quieres hacer hoy en Medellín?</h1>
+  <div class="top-bar">
+    <div class="lang-switch">
+      <button id="lang-es" class="active">🇪🇸</button>
+      <button id="lang-en">🇺🇸</button>
+    </div>
+    <button id="theme-toggle">🌓</button>
+  </div>
+
+  <header>
+    <h1 id="title">Hoy en Med</h1>
+    <p id="subtitle">¿Qué quieres hacer hoy en Medellín?</p>
   </header>
 
-  <section class="filtros">
-    <select id="categoria">
-      <option value="">Filtrar por categoría</option>
-      <option value="Cultura">Cultura</option>
-      <option value="Comida">Comida</option>
-      <option value="Aventura">Aventura</option>
-      <option value="Noche">Noche</option>
-    </select>
-    <input type="text" id="busqueda" placeholder="Buscar por palabra clave..." />
-    <button onclick="filtrarLugares()">Buscar</button>
-  </section>
+  <div class="filters">
+    <button data-category="Todos" class="active" id="btn-all">Todos</button>
+    <button data-category="Cultura" id="btn-culture">Cultura</button>
+    <button data-category="Comida" id="btn-food">Comida</button>
+    <button data-category="Aventura" id="btn-adventure">Aventura</button>
+    <button data-category="Noche" id="btn-night">Noche</button>
+  </div>
 
-  <main id="contenedor-lugares" class="grid-lugares">
-    <!-- Los lugares recomendados se cargan aquí desde Google Sheets -->
+  <main>
+    <div id="map"></div>
   </main>
 
-  <footer>
-    <p>© 2025 Hoy en Med - Conectando emociones con experiencias</p>
-  </footer>
+  <a class="whatsapp" href="https://wa.me/573105453556" target="_blank" id="whatsapp-link">📱 Contáctanos</a>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
