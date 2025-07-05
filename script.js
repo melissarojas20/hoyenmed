@@ -9,7 +9,7 @@ let markers = [];
 fetch(CSV_URL)
   .then(response => response.text())
   .then(data => {
-    const rows = data.split('\\n').slice(1);
+    const rows = data.split('\n').slice(1);
     rows.forEach(row => {
       const [name, lat, lon, category] = row.split(',');
       const marker = L.marker([lat, lon]).addTo(map).bindPopup(<b>${name}</b><br>${category});
